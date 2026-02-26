@@ -9,12 +9,12 @@ async function checkWebsite() {
 
     const closedText = "This form is no longer accepting responses";
 
-    if (!html.includes(CLOSED_TEXT)) {
-      console.log("Form is OPEN!");
-      await sendTelegramMessage("🚨 The form is now OPEN!");
+    if (html.includes(closedText)) {
+      console.log("Form closed!");
+      await sendTelegramMessage("🚨 The form is closed!");
       process.exit(10);
     } else {
-      console.log("Form still closed.");
+      console.log("Form is open.");
       process.exit(0);
     }
 
