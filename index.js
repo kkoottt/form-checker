@@ -12,10 +12,11 @@ async function checkWebsite() {
     if (html.includes(closedText)) {
       console.log("Form closed!");
       await sendTelegramMessage("🚨 The form is closed!");
-      process.exit(10);
-    } else {
-      console.log("Form is open.");
       process.exit(0);
+    } else {
+      console.log("Form is now open.");
+      await sendTelegramMessage("🚨 The form is now OPEN!");
+      process.exit(10);
     }
 
   } catch (error) {
