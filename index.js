@@ -1,6 +1,8 @@
 import fetch from "node-fetch";
 
-const URL = "https://bit.ly/ncmhonlinekonsulta";
+// const URL = "https://bit.ly/ncmhonlinekonsulta";
+
+const URL = "https://forms.gle/BeXXXgZBYsVp9HU96";
 
 async function checkWebsite() {
   try {
