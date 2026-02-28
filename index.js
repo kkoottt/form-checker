@@ -15,7 +15,7 @@ async function checkWebsite() {
       process.exit(0);
     } else {
       console.log("Form is now open.");
-      await sendTelegramMessage("🚨 The form is now OPEN! GO! GO! GO! GO! GO! Before it CLOSES again!!!");
+      await sendTelegramMessage("🚨 The form is now OPEN!!! GO! GO! GO! GO! GO! Before it CLOSES again!!!");
       process.exit(10);
     }
 
