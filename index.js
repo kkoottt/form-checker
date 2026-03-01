@@ -15,7 +15,7 @@ async function checkWebsite() {
       process.exit(10);
     } else {
       console.log("Form closed!");
-      await sendTelegramMessage("E-Konsulta form is still closed ...");
+      // await sendTelegramMessage("E-Konsulta form is still closed ...");
       process.exit(0);
     }
 
