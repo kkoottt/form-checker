@@ -9,14 +9,14 @@ async function checkWebsite() {
 
     const closedText = "This form is no longer accepting responses";
 
-    if (html.includes(closedText)) {
-      console.log("Form closed!");
-      await sendTelegramMessage("E-Konsulta form is still closed ...");
-      process.exit(0);
-    } else {
+    if (!html.includes(closedText)) {
       console.log("Form is now open.");
       await sendTelegramMessage("🚨 The form is now OPEN!!! GO! GO! GO! GO! GO! Before it CLOSES again!!!");
       process.exit(10);
+    } else {
+      console.log("Form closed!");
+      await sendTelegramMessage("E-Konsulta form is still closed ...");
+      process.exit(0);
     }
 
   } catch (error) {
